@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: simple-httpd-index
+data:
+  index.html: |
+    <html>
+      <body>
+        <h1>Ini tampilan dari HTTPD dan nama saya Rizky Oktamara</h1>
+      </body>
+    </html>

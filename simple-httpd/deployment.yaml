@@ -1,16 +1,4 @@
 ---
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: simple-httpd-index
-data:
-  index.html: |
-    <html>
-      <body>
-        <h1>Ini tampilan dari HTTPD dan nama saya Rizky Oktamara</h1>
-      </body>
-    </html>
----
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -38,14 +26,3 @@ spec:
         - name: httpd-index
           configMap:
             name: simple-httpd-index
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: simple-httpd-service
-spec:
-  selector:
-    app: simple-httpd
-  ports:
-    - port: 80
-      targetPort: 80
