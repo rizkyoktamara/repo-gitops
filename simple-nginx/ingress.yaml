@@ -17,3 +17,10 @@ spec:
                 name: simple-nginx-service
                 port:
                   number: 80
+          - path: /httpd
+            pathType: Prefix
+            backend:
+              service:
+                name: simple-httpd-service
+                port:
+                  number: 80

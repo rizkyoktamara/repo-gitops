@@ -10,6 +10,13 @@ spec:
   rules:
     - http:
         paths:
+          - path: /nginx
+            pathType: Prefix
+            backend:
+              service:
+                name: simple-nginx-service
+                port:
+                  number: 80
           - path: /httpd
             pathType: Prefix
             backend:
